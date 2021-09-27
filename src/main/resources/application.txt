@@ -1,0 +1,17 @@
+server.port=8081
+server.error.include-message=always
+
+spring.datasource.url: jdbc:postgresql://localhost:5432/authorizationtask
+spring.datasource.username:
+spring.datasource.password:
+spring.jpa.hibernate.ddl-auto: update
+spring.jpa.properties.hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.properties.hibernate.format_sql: true
+spring.jpa.show-sql: false
+
+spring.datasource.initialization-mode=never
+spring.datasource.data=classpath:seed.sql
+
+application.jwt.secretKey={There should be your secret key}
+application.jwt.tokenPrefix=Bearer
+application.jwt.tokenExpirationAfterDays=10
